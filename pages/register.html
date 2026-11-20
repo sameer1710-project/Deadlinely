@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account · Deadlinely</title>
+  <meta name="description" content="Deadlinely – Assignment Tracking SaaS that automatically organises deadlines into a priority list. By SD. Sameer Ahamed (PRN 250200175).">
+  <meta name="theme-color" content="#5b5bf0">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/icon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('dl_theme'));if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-page="register" data-base="../">
+  <div class="auth">
+    <aside class="auth-brand">
+      <a class="brand" href="../index.html"><span class="brand-logo"><svg class="i" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Deadlinely</a>
+      <div>
+        <h2>Never miss a deadline again.</h2>
+        <p>Create your free student account in under a minute.</p>
+        <ul class="auth-points">
+          <li><svg class="i" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Automatic priority list for every deadline</li>
+          <li><svg class="i" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Assignments, exams and calendar in one place</li>
+          <li><svg class="i" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Progress analytics and deadline reminders</li>
+        </ul>
+      </div>
+      <div class="auth-student"><small>Project by</small><b>Name:</b> SD. Sameer Ahamed<br><b>PRN:</b> 250200175</div>
+    </aside>
+    <main class="auth-panel">
+      <div class="auth-card">
+        <h1>Create account</h1>
+        <p>Start organising your assignments and exams.</p>
+        <form id="registerForm" novalidate>
+          <div class="field"><label for="name">Full name</label><input class="input" id="name" autocomplete="name" required value="SD. Sameer Ahamed"></div>
+          <div class="row">
+            <div class="field"><label for="prn">PRN</label><input class="input" id="prn" required value="250200175"></div>
+            <div class="field"><label for="institution">Institution</label><input class="input" id="institution" placeholder="College / university"></div>
+          </div>
+          <div class="field"><label for="email">Email</label><input class="input" id="email" type="email" autocomplete="email" required placeholder="you@college.edu"></div>
+          <div class="row">
+            <div class="field"><label for="password">Password</label><input class="input" id="password" type="password" autocomplete="new-password" required placeholder="min. 6 characters"></div>
+            <div class="field"><label for="confirm">Confirm</label><input class="input" id="confirm" type="password" autocomplete="new-password" required placeholder="repeat password"></div>
+          </div>
+          <label class="check-row" id="sampleRow"><input type="checkbox" id="sample" checked> Start with sample assignments &amp; exams</label>
+          <div class="error" id="authErr" role="alert"></div>
+          <button class="btn btn-primary btn-block btn-lg" id="registerBtn" type="submit">Create account</button>
+        </form>
+        <p class="auth-alt">Already registered? <a href="login.html">Log in</a></p>
+        <p class="mode-note" id="modeNote"></p>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/priority.js"></script>
+  <script src="../js/assignments.js"></script>
+  <script src="../js/exams.js"></script>
+  <script src="../js/calendar.js"></script>
+  <script src="../js/progress.js"></script>
+  <script src="../js/notifications.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

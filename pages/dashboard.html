@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard · Deadlinely</title>
+  <meta name="description" content="Deadlinely – Assignment Tracking SaaS that automatically organises deadlines into a priority list. By SD. Sameer Ahamed (PRN 250200175).">
+  <meta name="theme-color" content="#5b5bf0">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/icon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('dl_theme'));if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-page="dashboard" data-base="../">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="app-main">
+      <header class="topbar" id="topbar"></header>
+      <main class="page" id="page">
+
+        <section class="welcome">
+          <div><h2 id="welcomeTitle">Welcome back</h2><p class="muted" id="welcomeSub">Loading your deadlines…</p></div>
+          <a class="btn btn-ghost" href="priority.html">View full priority list</a>
+        </section>
+        <section class="stats" id="statCards"></section>
+        <section class="grid-2">
+          <div class="card">
+            <div class="card-head"><h3>Priority list – what to do next</h3><a href="priority.html">View all</a></div>
+            <div id="dashPriority"><div class="loading">Loading…</div></div>
+          </div>
+          <div class="stack">
+            <div class="card">
+              <div class="card-head"><h3>Your progress</h3><a href="progress.html">Details</a></div>
+              <div id="dashProgress"></div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h3>Upcoming exams</h3><a href="exams.html">All exams</a></div>
+              <div id="dashExams"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="app-footer" id="appFooter"></footer>
+    </div>
+  </div>
+  <div class="scrim" id="scrim" hidden></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/priority.js"></script>
+  <script src="../js/assignments.js"></script>
+  <script src="../js/exams.js"></script>
+  <script src="../js/calendar.js"></script>
+  <script src="../js/progress.js"></script>
+  <script src="../js/notifications.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Priority List · Deadlinely</title>
+  <meta name="description" content="Deadlinely – Assignment Tracking SaaS that automatically organises deadlines into a priority list. By SD. Sameer Ahamed (PRN 250200175).">
+  <meta name="theme-color" content="#5b5bf0">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/icon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('dl_theme'));if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-page="priority" data-base="../">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="app-main">
+      <header class="topbar" id="topbar"></header>
+      <main class="page" id="page">
+
+        <div class="card focus-card" id="prFocus"></div>
+        <div class="card" style="margin-bottom:20px">
+          <p class="explain"><strong style="color:var(--text)">How the automatic ranking works:</strong>
+            every pending assignment and upcoming exam gets a score = <code>urgency</code> (rises sharply as the deadline nears; overdue work jumps to the top)
+            + <code>importance</code> (Low / Medium / High) + <code>effort</code> (estimated hours). The list re-ranks itself every day, so you never have to sort deadlines by hand.</p>
+        </div>
+        <div class="chips" id="prChips"></div>
+        <div id="prList"><div class="loading">Loading…</div></div>
+      </main>
+      <footer class="app-footer" id="appFooter"></footer>
+    </div>
+  </div>
+  <div class="scrim" id="scrim" hidden></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/priority.js"></script>
+  <script src="../js/assignments.js"></script>
+  <script src="../js/exams.js"></script>
+  <script src="../js/calendar.js"></script>
+  <script src="../js/progress.js"></script>
+  <script src="../js/notifications.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

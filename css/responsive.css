@@ -1,0 +1,46 @@
+@media (max-width: 1100px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .grid-2, .grid-eq, .cal-layout { grid-template-columns: 1fr; }
+  .features, .engine { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 960px) {
+  .sidebar { position: fixed; left: 0; top: 0; transform: translateX(-100%); transition: transform 0.25s; box-shadow: var(--shadow); }
+  .sidebar.open { transform: none; }
+  .menu-btn { display: inline-flex; }
+  .topbar { padding: 12px 16px; }
+  .page { padding: 18px 16px; }
+  .app-footer { padding: 14px 16px; }
+  .hero { grid-template-columns: 1fr; padding-top: 24px; }
+  .mock { transform: none; }
+  .lp-links { display: none; }
+  .auth { grid-template-columns: 1fr; }
+  .auth-brand { padding: 28px 24px; }
+  .auth-brand h2 { font-size: 26px; }
+  .auth-points { display: none; }
+  .exam-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat { padding: 12px; gap: 10px; flex-direction: column; align-items: flex-start; }
+  .stat-val { font-size: 22px; }
+  .features, .engine { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+  .hide-sm { display: none; }
+  .topbar-title p { display: none; }
+  .topbar-actions { gap: 6px; }
+  .a-row { flex-wrap: wrap; padding: 12px 14px; }
+  .a-badges { justify-content: flex-start; order: 3; width: 100%; padding-left: 40px; }
+  .p-item { flex-wrap: wrap; }
+  .p-side { flex-direction: row; align-items: center; width: 100%; justify-content: space-between; }
+  .cal-grid { gap: 3px; }
+  .cal-cell { min-height: 54px; padding: 4px; }
+  .cal-ev { height: 6px; padding: 0; font-size: 0; border-radius: 3px; }
+  .notif-panel { position: fixed; left: 12px; right: 12px; top: 64px; width: auto; }
+  .exam-card { flex-wrap: wrap; }
+  .toolbar .select { flex: 1; }
+  .section { padding: 40px 18px; }
+  .section-head h2 { font-size: 26px; }
+  .lp-actions .btn-ghost { display: none; }
+}

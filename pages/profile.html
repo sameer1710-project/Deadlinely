@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile · Deadlinely</title>
+  <meta name="description" content="Deadlinely – Assignment Tracking SaaS that automatically organises deadlines into a priority list. By SD. Sameer Ahamed (PRN 250200175).">
+  <meta name="theme-color" content="#5b5bf0">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/icon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('dl_theme'));if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-page="profile" data-base="../">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="app-main">
+      <header class="topbar" id="topbar"></header>
+      <main class="page" id="page">
+
+        <div class="profile-head">
+          <div class="avatar-lg" id="pAvatar">?</div>
+          <div><h2 id="pHeadName"></h2><p class="muted" id="pHeadEmail"></p></div>
+        </div>
+        <section class="grid-eq">
+          <div class="stack">
+            <div class="card">
+              <div class="card-head"><h3>Student details</h3></div>
+              <form id="profileForm" novalidate>
+                <div class="field"><label for="pName">Full name</label><input class="input" id="pName" maxlength="80"></div>
+                <div class="row">
+                  <div class="field"><label for="pPrn">PRN</label><input class="input" id="pPrn" maxlength="30"></div>
+                  <div class="field"><label for="pEmail">Email</label><input class="input" id="pEmail" disabled></div>
+                </div>
+                <div class="row">
+                  <div class="field"><label for="pInst">Institution</label><input class="input" id="pInst" maxlength="100"></div>
+                  <div class="field"><label for="pCourse">Course / year</label><input class="input" id="pCourse" maxlength="60"></div>
+                </div>
+                <div class="error" id="pErr"></div>
+                <button class="btn btn-primary" type="submit">Save profile</button>
+              </form>
+            </div>
+            <div class="card">
+              <div class="card-head"><h3>Preferences</h3></div>
+              <div class="field"><label for="pTheme">Theme</label>
+                <select class="select" id="pTheme"><option value="light">Light</option><option value="dark">Dark</option></select></div>
+              <div class="field"><label>Browser deadline alerts</label>
+                <div class="btn-row" style="align-items:center"><span class="muted" id="pNotif"></span><button class="btn btn-ghost btn-sm" id="pEnableNotif" type="button">Enable alerts</button></div></div>
+            </div>
+          </div>
+          <div class="stack">
+            <div class="card">
+              <div class="card-head"><h3>About this project</h3></div>
+              <table class="info-table">
+                <tr><td>Project</td><td><strong>Deadlinely</strong> – Assignment Tracking SaaS</td></tr>
+                <tr><td>Category</td><td>Open Innovation · SaaS for students and educational institutions (Project 6)</td></tr>
+                <tr><td>Developer</td><td><strong>Name:</strong> SD. Sameer Ahamed</td></tr>
+                <tr><td>PRN</td><td>250200175</td></tr>
+                <tr><td>Unique feature</td><td>Automatically organises upcoming deadlines into a priority list</td></tr>
+                <tr><td>Tech stack</td><td>HTML · CSS · JavaScript · Supabase</td></tr>
+              </table>
+            </div>
+            <div class="card">
+              <div class="card-head"><h3>Your data</h3></div>
+              <table class="info-table">
+                <tr><td>Storage</td><td id="pMode"></td></tr>
+                <tr><td>Records</td><td id="pCounts"></td></tr>
+              </table>
+              <div class="btn-row" style="margin-top:16px">
+                <button class="btn btn-ghost" id="pExport" type="button">Export JSON</button>
+                <button class="btn btn-ghost" id="pSample" type="button">Add sample data</button>
+                <button class="btn btn-danger" id="pClear" type="button">Clear all data</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="app-footer" id="appFooter"></footer>
+    </div>
+  </div>
+  <div class="scrim" id="scrim" hidden></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/priority.js"></script>
+  <script src="../js/assignments.js"></script>
+  <script src="../js/exams.js"></script>
+  <script src="../js/calendar.js"></script>
+  <script src="../js/progress.js"></script>
+  <script src="../js/notifications.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
